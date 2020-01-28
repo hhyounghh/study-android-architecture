@@ -5,6 +5,8 @@ import androidx.navigation.fragment.navArgs
 import com.runeanim.mytoyproject.R
 import com.runeanim.mytoyproject.base.BaseFragment
 import com.runeanim.mytoyproject.databinding.DetailFragmentBinding
+import com.runeanim.mytoyproject.ui.main.ContributeAdapter
+import kotlinx.android.synthetic.main.layout_contributes.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 
@@ -28,6 +30,7 @@ class DetailFragment : BaseFragment<DetailFragmentBinding, DetailViewModel>(R.la
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        viewDataBinding.layoutContribute.rvContribute.adapter = ContributeAdapter()
         viewModel.start()
     }
 }

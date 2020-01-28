@@ -20,7 +20,15 @@
         android:paddingRight="8dp"
         android:paddingBottom="12dp">
 
+        <include
+            android:id="@+id/layout_contribute"
+            layout="@layout/layout_contributes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:viewmodel="@{viewmodel}" />
+
         <ViewStub
+            android:layout_below="@+id/layout_contribute"
             android:id="@+id/controller"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
