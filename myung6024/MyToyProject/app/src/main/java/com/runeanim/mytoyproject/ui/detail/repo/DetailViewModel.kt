@@ -1,6 +1,5 @@
-package com.runeanim.mytoyproject.ui.detail
+package com.runeanim.mytoyproject.ui.detail.repo
 
-import android.util.Log
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -56,10 +55,7 @@ class DetailViewModel(
             viewModelScope.launch {
                 launch(Dispatchers.IO) {
                     val doc = Jsoup.connect("https://github.com/users/$userId/contributions/").get()
-                    Log.d("loloss", doc.title())
                     val newsHeadlines = doc.getElementsByClass("js-calendar-graph-svg")
-                    Log.d("loloss", newsHeadlines.size.toString())
-                    Log.d("loloss", newsHeadlines[0].getElementsByClass("day").size.toString())
                     launch(Dispatchers.Main) {
                         _contribute.value = newsHeadlines.first().getElementsByClass("day").map {
                             Contribute(

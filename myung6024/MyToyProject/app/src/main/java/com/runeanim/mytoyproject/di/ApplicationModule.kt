@@ -6,7 +6,7 @@ import com.runeanim.mytoyproject.data.source.RepositoriesRepository
 import com.runeanim.mytoyproject.data.source.local.GithubDatabase
 import com.runeanim.mytoyproject.data.source.local.RepositoriesLocalDataSource
 import com.runeanim.mytoyproject.data.source.remote.RepositoriesRemoteDataSource
-import com.runeanim.mytoyproject.ui.detail.DetailViewModel
+import com.runeanim.mytoyproject.ui.detail.repo.DetailViewModel
 import com.runeanim.mytoyproject.ui.repo.RepoViewModel
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext

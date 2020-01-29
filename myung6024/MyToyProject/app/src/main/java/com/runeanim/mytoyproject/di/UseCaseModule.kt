@@ -10,4 +10,5 @@ val UseCaseModule = module {
     single { GetRepositoriesUseCase(get()) }
     single { SaveRepositoryUseCase(get()) }
     single { RemoveAllRepositoriesUseCase(get()) }
+    single { SearchUsersUseCase(get()) }
 }

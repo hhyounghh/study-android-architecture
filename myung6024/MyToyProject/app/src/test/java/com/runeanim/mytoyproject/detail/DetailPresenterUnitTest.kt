@@ -8,7 +8,7 @@ import com.runeanim.mytoyproject.MainCoroutineRule
 import com.runeanim.mytoyproject.data.source.local.entity.RepositoryEntity
 import com.runeanim.mytoyproject.domain.GetRepositoryInfoUseCase
 import com.runeanim.mytoyproject.domain.GetUserInfoUseCase
-import com.runeanim.mytoyproject.ui.detail.DetailViewModel
+import com.runeanim.mytoyproject.ui.detail.repo.DetailViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
 import org.junit.Rule

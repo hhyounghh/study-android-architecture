@@ -1,4 +1,4 @@
-package com.runeanim.mytoyproject.ui.search
+package com.runeanim.mytoyproject.ui.search.repo
 
 import androidx.appcompat.widget.SearchView
 import androidx.databinding.BindingAdapter

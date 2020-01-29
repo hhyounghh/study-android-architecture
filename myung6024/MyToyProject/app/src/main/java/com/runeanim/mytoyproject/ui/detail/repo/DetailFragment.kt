@@ -1,12 +1,12 @@
-package com.runeanim.mytoyproject.ui.detail
+package com.runeanim.mytoyproject.ui.detail.repo
 
 import android.os.Bundle
 import androidx.navigation.fragment.navArgs
 import com.runeanim.mytoyproject.R
 import com.runeanim.mytoyproject.base.BaseFragment
 import com.runeanim.mytoyproject.databinding.DetailFragmentBinding
+import com.runeanim.mytoyproject.ui.detail.repo.DetailFragmentArgs
 import com.runeanim.mytoyproject.ui.main.ContributeAdapter
-import kotlinx.android.synthetic.main.layout_contributes.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 

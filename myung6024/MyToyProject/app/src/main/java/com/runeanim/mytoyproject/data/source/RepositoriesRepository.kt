@@ -5,6 +5,7 @@ import com.runeanim.mytoyproject.data.model.Owner
 import com.runeanim.mytoyproject.data.model.Repository
 import com.runeanim.mytoyproject.data.source.local.entity.RepositoryEntity
 import com.runeanim.mytoyproject.data.source.remote.response.RepositoriesResponse
+import com.runeanim.mytoyproject.data.source.remote.response.UsersResponse
 
 interface RepositoriesRepository {
 
@@ -15,6 +16,8 @@ interface RepositoriesRepository {
     suspend fun removeAllRepositories()
 
     suspend fun searchRepositories(searchKeyWord: String): Result<RepositoriesResponse>
+
+    suspend fun searchUsers(searchKeyWord: String): Result<UsersResponse>
 
     suspend fun getRepositoryInfo(repoUrl: String): Result<Repository>
 

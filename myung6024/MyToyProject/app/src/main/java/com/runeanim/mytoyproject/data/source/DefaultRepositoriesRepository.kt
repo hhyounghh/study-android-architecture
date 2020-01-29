@@ -9,6 +9,7 @@ import com.runeanim.mytoyproject.data.source.local.RepositoriesLocalDataSource
 import com.runeanim.mytoyproject.data.source.local.entity.RepositoryEntity
 import com.runeanim.mytoyproject.data.source.remote.RepositoriesRemoteDataSource
 import com.runeanim.mytoyproject.data.source.remote.response.RepositoriesResponse
+import com.runeanim.mytoyproject.data.source.remote.response.UsersResponse
 import kotlinx.coroutines.*
 import java.lang.Exception
 
@@ -43,6 +44,16 @@ class DefaultRepositoriesRepository(
     override suspend fun searchRepositories(searchKeyWord: String): Result<RepositoriesResponse> {
         return withContext(ioDispatcher) {
             val newTasks = repositoriesRemoteDataSource.searchRepositories(searchKeyWord)
+            (newTasks as? Success)?.let {
+                return@withContext Success(it.data)
+            }
+            return@withContext Error(Exception("Illegal state"))
+        }
+    }
+
+    override suspend fun searchUsers(searchKeyWord: String): Result<UsersResponse> {
+        return withContext(ioDispatcher) {
+            val newTasks = repositoriesRemoteDataSource.searchUsers(searchKeyWord)
             (newTasks as? Success)?.let {
                 return@withContext Success(it.data)
             }

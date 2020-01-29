@@ -1,4 +1,4 @@
-package com.runeanim.mytoyproject.ui.search
+package com.runeanim.mytoyproject.ui.search.repo
 
 import android.content.Context.INPUT_METHOD_SERVICE
 import android.os.Bundle
@@ -10,6 +10,7 @@ import com.runeanim.mytoyproject.data.source.local.entity.RepositoryEntity
 import com.runeanim.mytoyproject.databinding.SearchFragmentBinding
 import com.runeanim.mytoyproject.ui.repo.RepoListAdapter
 import com.runeanim.mytoyproject.ui.repo.RepoViewModel
+import com.runeanim.mytoyproject.ui.search.repo.SearchFragmentDirections
 import com.runeanim.mytoyproject.util.EventObserver
 import org.koin.android.ext.android.inject
 

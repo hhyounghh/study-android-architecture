@@ -19,13 +19,13 @@
 
     <fragment
         android:id="@+id/search_screen"
-        android:name="com.runeanim.mytoyproject.ui.search.SearchFragment"
+        android:name="com.runeanim.mytoyproject.ui.search.repo.SearchFragment"
         android:label="Search screen"
         tools:layout="@layout/search_fragment" />
 
     <fragment
         android:id="@+id/detail_screen"
-        android:name="com.runeanim.mytoyproject.ui.detail.DetailFragment"
+        android:name="com.runeanim.mytoyproject.ui.detail.repo.DetailFragment"
         android:label="Detail screen"
         tools:layout="@layout/detail_fragment">
         <argument

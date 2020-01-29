@@ -7,7 +7,7 @@
 
         <variable
             name="viewmodel"
-            type="com.runeanim.mytoyproject.ui.detail.DetailViewModel" />
+            type="com.runeanim.mytoyproject.ui.detail.repo.DetailViewModel" />
     </data>
 
     <androidx.recyclerview.widget.RecyclerView

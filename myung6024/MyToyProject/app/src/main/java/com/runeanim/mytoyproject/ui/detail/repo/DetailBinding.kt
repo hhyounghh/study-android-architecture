@@ -1,4 +1,4 @@
-package com.runeanim.mytoyproject.ui.detail
+package com.runeanim.mytoyproject.ui.detail.repo
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter

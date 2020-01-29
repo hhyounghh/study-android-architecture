@@ -7,6 +7,7 @@ import com.runeanim.mytoyproject.data.model.Owner
 import com.runeanim.mytoyproject.data.model.Repository
 import com.runeanim.mytoyproject.data.source.remote.api.GitHubAPI
 import com.runeanim.mytoyproject.data.source.remote.response.RepositoriesResponse
+import com.runeanim.mytoyproject.data.source.remote.response.UsersResponse
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -43,4 +44,12 @@ class RepositoriesRemoteDataSource internal constructor(
             }
         }
 
+    suspend fun searchUsers(searchKeyWord: String): Result<UsersResponse> =
+        withContext(ioDispatcher) {
+            return@withContext try {
+                Success(gitHubAPI.searchUsers(searchKeyWord))
+            } catch (e: Exception) {
+                Error(e)
+            }
+        }
 }
